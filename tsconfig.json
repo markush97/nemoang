@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@environment/*": ["environments/*"],
+      //core
+      "@app/core/*": ["modules/coreModule/*"],
+      "@app/config/*": ["modules/coreModule/config/*"],
+      "@app/database/*": ["modules/coreModule/database/*"],
+      
+      //Permissions
+      "@app/permissions/*": ["modules/permissionsModule/*"],
+      "@app/roles/*": ["modules/permissionsModule/roles/*"],
+      "@app/user/*": ["modules/permissionsModule/user/*"],
+      "@app/policies/*": ["modules/permissionsModule/policies/*"],
+      "@app/token/*": ["modules/permissionsModule/token/*"],
+      "@app/auth/*": ["modules/permissionsModule/auth/*"],
+      
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
